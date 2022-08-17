@@ -1,0 +1,57 @@
+.section-4 {
+    width: 100%;
+    height: 70vh;
+    background-color: #333;
+    @include flexLayout;
+    flex-direction: column;
+
+    @media(max-width: 700px){
+        height: 50vh;
+    }
+}
+
+
+.section-4-heading {
+    @include sectionHeading;
+    color: #fff;
+    box-shadow: none;
+    border-color: #fff;
+    margin-bottom: 5rem;
+
+}
+
+.contact-form {
+    @include flexLayout;
+    width: 50rem;
+    flex-direction: column;
+
+    input, textarea {
+        width: 100%;
+        padding: .5rem;
+        margin: 0.5rem 0;
+        background-color: #eef;
+        font-size: 1.5rem;
+        border: 0.2rem solid $color-pink;
+        color:#555;
+
+        @media(max-width: 550px){
+            width: 80%;
+            
+        }
+    }
+
+    textarea {
+        height: 10rem;
+        max-height: 15rem;
+        max-width: 100%;
+    }
+
+    & .contact-form-btn {
+        background-color: $color-pink;
+        color: $color-white;
+        text-transform: uppercase;
+        letter-spacing: 1rem;
+        cursor: pointer;
+    }
+}
+

@@ -1,0 +1,58 @@
+.navbar {
+    width: 100%;
+    height: 4rem;
+    background-color: $color-pink;
+    box-shadow: 0.2rem 0.2rem 0.5rem #555;
+    position: absolute;
+    z-index: 300;
+    @include flexLayout;
+}
+
+.sticky {
+    position:fixed;
+    top:0;
+}
+
+.navbar-link {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color:#333;
+    margin: 0 3rem;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    position: relative;
+
+    @media(max-width: 600px){
+        font-size: 1.4rem;
+    }
+    
+   
+}
+
+.change.navbar-link {
+    color:$color-white;
+}
+
+.navbar-link:hover {
+    color: $color-white;
+}
+
+.navbar-link::before {
+    content:"";
+    width: 0;
+    height: 0.2rem;
+    background-color: $color-white;
+    position:absolute;
+    right:-15%;
+    bottom: -0.3rem;
+    transition: width 0.5s;
+  }
+
+.change.navbar-link::before {
+    width: 130%;
+}
+
+
+.navbar-link:hover::before {
+    width: 130%;
+}

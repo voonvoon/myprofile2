@@ -1,0 +1,60 @@
+$color-pink: #e41c6f;
+$color-white: #fff;
+
+*{
+    margin:0;
+    padding:0;
+    outline:none;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+}
+
+.container {
+    position: relative;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+
+    @media(max-width: 600px){
+        font-size: 55%;
+    }
+
+    @media(max-width: 450px){
+        font-size: 50%;
+    }
+    @media(max-width: 400px){
+        font-size: 45%;
+    }
+    @media(max-width: 360px){
+        font-size: 40%;
+    }
+}
+
+@mixin flexLayout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin textShadow1 {
+    text-shadow: 0.1rem 0.1rem 0.5rem #555;
+}
+
+@mixin boxShadow {
+    box-shadow: 0.3rem 0.3rem 0.5rem #777;;
+}
+
+@mixin sectionHeading {
+    font-size: 5rem;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    margin-bottom: 15rem;
+    border-bottom: 0.3rem solid #333;
+    text-shadow: 0.2rem 0.2rem 0.5rem #555;
+}
